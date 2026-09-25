@@ -1,0 +1,424 @@
+/* ===== Цвета и базовые настройки ===== */
+:root {
+  --cream: #fbf6ef;
+  --cream-deep: #f3e6d6;
+  --paper: #ffffff;
+  --ink: #3a2e27;
+  --ink-soft: #6e5f55;
+  --copper: #c8663b;
+  --copper-dark: #a4502b;
+  --copper-light: #e7a27a;
+  --water: #3d8a9a;
+  --water-soft: #dcecee;
+  --earth: #7a8b5c;
+  --earth-soft: #e6ead9;
+  --pipe: #8c7b6e;
+  --line: #eadccb;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(90, 60, 30, .08);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+h1, h2, h3 {
+  font-family: "Lora", Georgia, serif;
+  line-height: 1.2;
+  margin: 0 0 .5em;
+}
+
+h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 1em; }
+
+a { color: inherit; }
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container--narrow { max-width: 780px; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--copper);
+  margin-bottom: .6em;
+}
+
+.eyebrow--light { color: var(--copper-light); }
+
+/* ===== Кнопки ===== */
+.btn {
+  display: inline-block;
+  padding: .85em 1.6em;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s, color .2s, transform .2s;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn--primary {
+  background: var(--copper);
+  color: #fff;
+}
+
+.btn--primary:hover { background: var(--copper-dark); }
+
+.btn--ghost {
+  border: 2px solid var(--copper);
+  color: var(--copper-dark);
+}
+
+.btn--ghost:hover { background: var(--copper); color: #fff; }
+
+/* ===== Шапка ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(251, 246, 239, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 68px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.logo__icon { width: 30px; height: 30px; color: var(--copper); }
+
+.nav { display: flex; gap: 24px; }
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.nav a:hover { color: var(--copper); }
+
+.header__phone {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--copper-dark);
+  white-space: nowrap;
+}
+
+/* ===== Главный экран ===== */
+.hero { padding: 64px 0 80px; }
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero__lead {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 34em;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 32px;
+}
+
+.hero__facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  color: var(--ink-soft);
+  font-size: .95rem;
+}
+
+.hero__facts strong { color: var(--ink); }
+
+.hero__art svg { width: 100%; height: auto; max-width: 440px; display: block; margin: 0 auto; }
+
+/* ===== Секции ===== */
+.section { padding: 80px 0; }
+
+.section--tinted { background: var(--cream-deep); }
+
+.section__lead {
+  color: var(--ink-soft);
+  margin-bottom: 32px;
+}
+
+/* ===== Карточки услуг ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  transition: transform .2s;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+.card p { color: var(--ink-soft); margin: 0; }
+
+.card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+
+.card__icon svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card__icon--warm { background: #fbe4d6; color: var(--copper-dark); }
+.card__icon--water { background: var(--water-soft); color: var(--water); }
+.card__icon--earth { background: var(--earth-soft); color: var(--earth); }
+
+/* ===== Преимущества ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.feature p { color: var(--ink-soft); margin: 0; }
+
+.feature__num {
+  display: block;
+  font-family: "Lora", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--copper-light);
+  margin-bottom: 8px;
+}
+
+/* ===== Цены ===== */
+.price-table {
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.price-row:last-child { border-bottom: none; }
+
+.price {
+  font-weight: 700;
+  color: var(--copper-dark);
+  white-space: nowrap;
+}
+
+/* ===== Шаги ===== */
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  counter-reset: step;
+}
+
+.step {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--copper);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.step p { color: var(--ink-soft); margin: 0; }
+
+/* ===== Вопросы ===== */
+.faq {
+  background: var(--paper);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  margin-top: 14px;
+  padding: 0 24px;
+}
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 20px 32px 20px 0;
+  font-weight: 700;
+  position: relative;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--copper);
+  transition: transform .2s;
+}
+
+.faq[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+
+.faq p { color: var(--ink-soft); padding-bottom: 20px; margin: 0; }
+
+/* ===== Контакты ===== */
+.contacts {
+  background: #3a2e27;
+  color: #fbf6ef;
+}
+
+.contacts__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.contacts__lead { color: #e8dccd; font-size: 1.1rem; }
+
+.contacts__meta { color: #bfae9d; font-size: .95rem; }
+
+.contact-list { display: grid; gap: 12px; }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 24px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  text-decoration: none;
+  transition: background .2s, border-color .2s;
+}
+
+.contact:hover {
+  background: rgba(200, 102, 59, .2);
+  border-color: var(--copper);
+}
+
+.contact__label {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--copper-light);
+}
+
+.contact__value { font-size: 1.15rem; font-weight: 700; }
+
+/* ===== Подвал ===== */
+.footer {
+  background: #2e241e;
+  color: #bfae9d;
+  font-size: .9rem;
+  padding: 24px 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer a { text-decoration: none; }
+
+.footer a:hover { color: var(--copper-light); }
+
+/* ===== Адаптив ===== */
+@media (max-width: 960px) {
+  .nav { display: none; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .features, .steps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  .hero { padding: 40px 0 56px; }
+  .hero__inner, .contacts__inner { grid-template-columns: 1fr; gap: 32px; }
+  .hero__art { order: -1; }
+  .hero__art svg { max-width: 240px; }
+  .section { padding: 56px 0; }
+  .cards, .features, .steps { grid-template-columns: 1fr; }
+  .price-row { padding: 16px 20px; }
+  .header__phone { font-size: .95rem; }
+}
