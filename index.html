@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сантех — отопление, водоснабжение, канализация</title>
+  <meta name="description" content="Сантех: монтаж отопления, водоснабжения и канализации под ключ. Выезд мастера, честная смета, гарантия на работы.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3c-5 7-9 11.5-9 16a9 9 0 0 0 18 0c0-4.5-4-9-9-16z' fill='%23c8663b'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Сантех — на главную">
+        <svg class="logo__icon" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3c-5 7-9 11.5-9 16a9 9 0 0 0 18 0c0-4.5-4-9-9-16z" fill="currentColor"/>
+          <path d="M12 20a4 4 0 0 0 4 4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>Сантех</span>
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#steps">Как работаем</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <!-- ЗАГЛУШКА: замените номер телефона -->
+      <a href="tel:+79000000000" class="header__phone">+7 (900) 000-00-00</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Главный экран -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">Сантехнические работы под ключ</p>
+          <h1>Тепло, вода и&nbsp;сухость в&nbsp;вашем доме</h1>
+          <p class="hero__lead">
+            Монтируем отопление, водоснабжение и канализацию в квартирах, домах и на дачах.
+            Делаем аккуратно, объясняем понятно, отвечаем за результат.
+          </p>
+          <div class="hero__actions">
+            <a href="#contacts" class="btn btn--primary">Вызвать мастера</a>
+            <a href="#prices" class="btn btn--ghost">Посмотреть цены</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>Выезд</strong> в день обращения</li>
+            <li><strong>Смета</strong> до начала работ</li>
+            <li><strong>Гарантия</strong> на монтаж</li>
+          </ul>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <svg viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="180" fill="var(--cream-deep)"/>
+            <!-- радиатор -->
+            <g transform="translate(95 170)">
+              <rect x="0" y="0" width="210" height="130" rx="18" fill="var(--copper)"/>
+              <g fill="var(--copper-light)">
+                <rect x="18" y="16" width="22" height="98" rx="11"/>
+                <rect x="52" y="16" width="22" height="98" rx="11"/>
+                <rect x="86" y="16" width="22" height="98" rx="11"/>
+                <rect x="120" y="16" width="22" height="98" rx="11"/>
+                <rect x="154" y="16" width="22" height="98" rx="11"/>
+              </g>
+              <rect x="-18" y="100" width="24" height="14" rx="4" fill="var(--pipe)"/>
+              <rect x="204" y="100" width="24" height="14" rx="4" fill="var(--pipe)"/>
+            </g>
+            <!-- тёплые волны -->
+            <g fill="none" stroke="var(--copper)" stroke-width="7" stroke-linecap="round" opacity=".55">
+              <path d="M140 150c-12-14 12-24 0-40"/>
+              <path d="M200 150c-12-14 12-24 0-40"/>
+              <path d="M260 150c-12-14 12-24 0-40"/>
+            </g>
+            <!-- капля -->
+            <path d="M318 70c-14 20-26 33-26 46a26 26 0 0 0 52 0c0-13-12-26-26-46z" fill="var(--water)"/>
+            <path d="M306 120a12 12 0 0 0 12 12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="section" id="services">
+      <div class="container">
+        <p class="eyebrow">Услуги</p>
+        <h2>Чем мы занимаемся</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card__icon card__icon--warm" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M7 5v14M12 5v14M17 5v14" /></svg>
+            </div>
+            <h3>Отопление</h3>
+            <p>Радиаторы, тёплые полы, котельные, разводка по дому. Подбираем систему под ваш дом и бюджет.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--water" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3c-3 4.5-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-3-6.5-6-11z"/></svg>
+            </div>
+            <h3>Водоснабжение</h3>
+            <p>Разводка труб, бойлеры и водонагреватели, фильтры, насосные станции, подключение к скважине.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--earth" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6h8a4 4 0 0 1 4 4v8M16 18h4M4 6V3"/></svg>
+            </div>
+            <h3>Канализация</h3>
+            <p>Внутренняя и наружная канализация, замена стояков, септики, устранение засоров и запахов.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--warm" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14.5 4.5l5 5-9 9H5.5v-5z M12.5 6.5l5 5"/></svg>
+            </div>
+            <h3>Сантехника</h3>
+            <p>Установка ванн, душевых, унитазов, раковин, смесителей и стиральных машин.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--water" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+            </div>
+            <h3>Котлы и бойлерные</h3>
+            <p>Монтаж и обвязка газовых, электрических и твердотопливных котлов, бойлеров косвенного нагрева.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--earth" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z M12 10v4 M12 17v.5"/></svg>
+            </div>
+            <h3>Аварийный выезд</h3>
+            <p>Течь, прорыв трубы, холодные батареи — приедем, найдём причину и устраним.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Почему мы -->
+    <section class="section section--tinted">
+      <div class="container">
+        <p class="eyebrow">Почему нам доверяют</p>
+        <h2>Работаем так, как сделали бы у себя дома</h2>
+        <div class="features">
+          <div class="feature">
+            <span class="feature__num">01</span>
+            <h3>Честная смета</h3>
+            <p>Называем стоимость до начала работ. Цена не вырастет без вашего согласия.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">02</span>
+            <h3>Чистота после себя</h3>
+            <p>Работаем аккуратно, накрываем мебель и полы, убираем мусор.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">03</span>
+            <h3>Гарантия</h3>
+            <p>Даём письменную гарантию на выполненный монтаж и приезжаем, если что-то не так.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">04</span>
+            <h3>Понятные советы</h3>
+            <p>Объясняем простыми словами и помогаем выбрать материалы без лишних трат.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цены -->
+    <!-- ЗАГЛУШКА: цены примерные, поправьте под свой регион и прайс -->
+    <section class="section" id="prices">
+      <div class="container">
+        <p class="eyebrow">Цены</p>
+        <h2>Ориентировочная стоимость</h2>
+        <p class="section__lead">Точную цену назовём после осмотра объекта. Выезд на замер — бесплатно.</p>
+        <div class="price-table" role="table" aria-label="Цены на работы">
+          <div class="price-row" role="row"><span role="cell">Установка радиатора</span><span role="cell" class="price">от 2 500 ₽</span></div>
+          <div class="price-row" role="row"><span role="cell">Монтаж тёплого пола, м²</span><span role="cell" class="price">от 600 ₽</span></div>
+          <div class="price-row" role="row"><span role="cell">Монтаж котла с обвязкой</span><span role="cell" class="price">от 15 000 ₽</span></div>
+          <div class="price-row" role="row"><span role="cell">Разводка водоснабжения, точка</span><span role="cell" class="price">от 1 500 ₽</span></div>
+          <div class="price-row" role="row"><span role="cell">Установка водонагревателя</span><span role="cell" class="price">от 3 000 ₽</span></div>
+          <div class="price-row" role="row"><span role="cell">Замена канализационного стояка</span><span role="cell" class="price">от 6 000 ₽</span></div>
+          <div class="price-row" role="row"><span role="cell">Установка унитаза</span><span role="cell" class="price">от 2 500 ₽</span></div>
+          <div class="price-row" role="row"><span role="cell">Установка смесителя</span><span role="cell" class="price">от 1 000 ₽</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как работаем -->
+    <section class="section section--tinted" id="steps">
+      <div class="container">
+        <p class="eyebrow">Как работаем</p>
+        <h2>Четыре простых шага</h2>
+        <ol class="steps">
+          <li class="step">
+            <h3>Заявка</h3>
+            <p>Звоните или пишите в мессенджер — ответим и договоримся о времени.</p>
+          </li>
+          <li class="step">
+            <h3>Осмотр и смета</h3>
+            <p>Мастер приезжает, оценивает объём работ и составляет смету.</p>
+          </li>
+          <li class="step">
+            <h3>Монтаж</h3>
+            <p>Выполняем работы в согласованные сроки, проверяем систему под давлением.</p>
+          </li>
+          <li class="step">
+            <h3>Сдача и гарантия</h3>
+            <p>Показываем результат, объясняем, как пользоваться, и выдаём гарантию.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Вопросы -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <p class="eyebrow">Вопросы</p>
+        <h2>Часто спрашивают</h2>
+        <details class="faq">
+          <summary>Сколько стоит выезд мастера?</summary>
+          <p>Выезд на осмотр и составление сметы — бесплатно. Если вы заказываете работы, отдельно за выезд платить не нужно.</p>
+        </details>
+        <details class="faq">
+          <summary>Вы работаете со своими материалами?</summary>
+          <p>Можем закупить материалы сами — у проверенных поставщиков. Или работаем с вашими, если они подходят по качеству.</p>
+        </details>
+        <details class="faq">
+          <summary>Какая гарантия на работы?</summary>
+          <p>Даём письменную гарантию на выполненный монтаж. Срок зависит от вида работ — уточним при составлении сметы.</p>
+        </details>
+        <details class="faq">
+          <summary>Работаете ли вы в выходные?</summary>
+          <p>Да, работаем без выходных. Аварийные вызовы принимаем в любое время.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <!-- ЗАГЛУШКА: замените телефон, ссылки на мессенджеры, почту и район работы -->
+    <section class="section contacts" id="contacts">
+      <div class="container contacts__inner">
+        <div>
+          <p class="eyebrow eyebrow--light">Контакты</p>
+          <h2>Нужен сантехник? Напишите нам</h2>
+          <p class="contacts__lead">Ответим быстро, подскажем по стоимости и договоримся о выезде.</p>
+          <p class="contacts__meta">Ежедневно с 8:00 до 21:00 · аварийные вызовы круглосуточно<br>Работаем по городу и области</p>
+        </div>
+        <div class="contact-list">
+          <a class="contact" href="tel:+79000000000">
+            <span class="contact__label">Телефон</span>
+            <span class="contact__value">+7 (900) 000-00-00</span>
+          </a>
+          <a class="contact" href="https://t.me/santeh_example" target="_blank" rel="noopener">
+            <span class="contact__label">Telegram</span>
+            <span class="contact__value">@santeh_example</span>
+          </a>
+          <a class="contact" href="https://wa.me/79000000000" target="_blank" rel="noopener">
+            <span class="contact__label">WhatsApp</span>
+            <span class="contact__value">Написать в WhatsApp</span>
+          </a>
+          <a class="contact" href="mailto:info@santeh.example">
+            <span class="contact__label">Почта</span>
+            <span class="contact__value">info@santeh.example</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year">2026</span> Сантех. Отопление, водоснабжение, канализация.</span>
+      <a href="#top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
